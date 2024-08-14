@@ -138,6 +138,7 @@ export default function Home() {
              <div>
              <img src={produto.imagem}></img>
              </div>
+             <button onClick={() => removerProduto(produto.id)}> Remover </button>
              </div>
              )
     }
