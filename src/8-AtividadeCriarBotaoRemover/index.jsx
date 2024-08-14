@@ -94,12 +94,12 @@ export default function Home() {
     const [listaPedidosLimpeza, setListaPedidosLimpeza] = useState([]);
 
     const adicionarPedidos = (objeto) => {
-        setListaPedidosLimpeza([...listaPedidos, objeto])
+        setListaPedidosLimpeza([...listaPedidosLimpeza, objeto])
     }
 
     const removerProduto= (id) => {
         let remover = false;
-        let lista = listaPedidos.filter((produto) => {
+        let lista = listaPedidosLimpeza.filter((produto) => {
             if(remover == false) {
                 if(produto.id !== id) {
                     return produto
@@ -131,13 +131,10 @@ export default function Home() {
             )
           }
           {
-             listaProdutos.map((produto)=>
+             listaPedidosLimpeza.map((produto)=>
              <div key = {produto.id}>
              <p>{produto.item}</p>
              <p>{produto.preco}</p>
-             <div>
-             <img src={produto.imagem}></img>
-             </div>
              <button onClick={() => removerProduto(produto.id)}> Remover </button>
              </div>
              )

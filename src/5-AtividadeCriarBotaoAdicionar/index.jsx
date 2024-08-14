@@ -14,8 +14,6 @@ export default function Home() {
 
             item: "Detergente Líquido YPÊ",
 
-            imagem: "https://mercado.qualycestas.com.br/produtos-de-limpeza/detergente-liquido-ype-clear-500ml",
-
             preco: "R$ 2,90"
 
         },
@@ -25,8 +23,6 @@ export default function Home() {
             id: 2,
 
             item: "Limpador Veja Multiuso",
-
-            imagem: "https://mercado.qualycestas.com.br/produtos-de-limpeza/limpador-veja-multiuso-500ml",
 
             preco: "R$ 6,48"
 
@@ -38,8 +34,6 @@ export default function Home() {
 
             item: "Esponja Dupla Face",
 
-            imagem: "https://mercado.qualycestas.com.br/produtos-de-limpeza/esponja-dupla-face-brilhus",
-
             preco: "R$ 0,99"
 
         },
@@ -50,17 +44,15 @@ export default function Home() {
 
             item: "Sabão em Pedra YPÊ",
 
-            imagem: "https://mercado.qualycestas.com.br/produtos-de-limpeza/sabao-em-pedra-ype-pacote-5x180g-fragrancias",
-
             preco: "R$ 11,61"
 
         },
     ]);
 
-    const [listaPedidosLimpeza, setListaPedidosLimpeza] = useState([]);
+    const [listaPedidosLimpeza, setPedidosLimpeza] = useState([]);
 
     const adicionarPedidos = (objeto) => {
-        setListaPedidosLimpeza([...listaPedidos, objeto])
+        setPedidosLimpeza([...listaPedidosLimpeza, objeto])
     }
 
 

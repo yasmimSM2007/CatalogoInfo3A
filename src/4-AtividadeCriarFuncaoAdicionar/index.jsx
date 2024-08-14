@@ -57,10 +57,10 @@ export default function Home() {
         },
     ]);
 
-    const [listaPedidos, setPedidos] = useState([]);
+    const [listaPedidosLimpeza, setPedidosLimpeza] = useState([]);
 
     const adicionarPedidos = (objeto) => {
-        setListaPedidosLimpeza([...listaPedidos, objeto])
+        setPedidosLimpeza([...listaPedidosLimpeza, objeto])
     }
 
 

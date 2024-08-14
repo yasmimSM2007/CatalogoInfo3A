@@ -55,10 +55,10 @@ export default function Home() {
         },
     ]);
 
-    const [listaPedidosLimpeza, setListaPedidosLimpeza] = useState([]);
+    const [listaPedidosLimpeza, setPedidosLimpeza] = useState([]);
 
     const adicionarPedidos = (objeto) => {
-        setListaPedidosLimpeza([...listaPedidos, objeto])
+        setPedidosLimpeza([...listaPedidosLimpeza, objeto])
     }
 
 
@@ -77,13 +77,10 @@ export default function Home() {
             )
           }
           {
-             listaProdutos.map((produto)=>
+             listaPedidosLimpeza.map((produto)=>
              <div key = {produto.id}>
              <p>{produto.item}</p>
              <p>{produto.preco}</p>
-             <div>
-             <img src={produto.imagem}></img>
-             </div>
              </div>
              )
     }
